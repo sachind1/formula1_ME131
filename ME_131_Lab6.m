@@ -4,14 +4,21 @@ g = 9.8; % m/s2
 rho = 1.225; % kg/m3
 A_f = 0.15 * 0.25 * 0.9; % m2, provided by NSCEP empirical formula
 V_init = 0.5; %?
-R_x = 2; %PLACEHOLDER
-C_d = 14; %PLACEHOLDER
+C_d = 9.0138;
+R_x = 8.2029;
 
 %%
-A = 
-B = 
-C = 
-D = 
+A = 1/m;
+B = rho*C_d*A_f/m;
+% C = 
+% D = 
+Q = 1E4;
+R = 1;
+K = lqr(A,B,Q,R);
+
+
+
+
 
 %%
 L = 50;
